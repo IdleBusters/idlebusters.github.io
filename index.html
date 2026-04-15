@@ -316,6 +316,43 @@
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
+    /* ── COOKIE BANNER ── */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: #111111;
+      color: #fff;
+      padding: 20px clamp(24px, 5vw, 80px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      transform: translateY(100%);
+      transition: transform 0.35s ease;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
+    }
+    #cookie-banner.visible { transform: translateY(0); }
+    #cookie-banner p { font-size: 14px; color: rgba(255,255,255,0.75); max-width: 640px; line-height: 1.55; }
+    #cookie-banner a { color: #fff; text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
+    .btn-cookie-accept {
+      background: #fff; color: #111;
+      padding: 10px 22px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; font-family: inherit;
+      cursor: pointer; border: none; transition: opacity 0.15s;
+    }
+    .btn-cookie-accept:hover { opacity: 0.85; }
+    .btn-cookie-decline {
+      background: transparent; color: rgba(255,255,255,0.65);
+      padding: 10px 22px; border-radius: 8px;
+      font-size: 14px; font-weight: 500; font-family: inherit;
+      cursor: pointer; border: 1.5px solid rgba(255,255,255,0.25);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-cookie-decline:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -467,10 +504,43 @@
   <footer>
     <div class="footer-brand">
       <img src="logo.png" alt="Idle Busters" />
-      <p>© 2025 Idle Busters, Inc. All rights reserved.</p>
+      <p>© 2026 Idle Busters, Inc. All rights reserved.</p>
     </div>
-    <p><a href="mailto:info@idlebusters.com">info@idlebusters.com</a></p>
+    <p>
+      <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="cookie-policy.html">Cookie Policy</a> &nbsp;·&nbsp;
+      <a href="mailto:info@idlebusters.com">info@idlebusters.com</a>
+    </p>
   </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" role="region" aria-label="Cookie consent">
+    <p>
+      We use cookies to ensure basic site functionality and analyse traffic. See our
+      <a href="cookie-policy.html">Cookie Policy</a> for details.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn-cookie-accept" onclick="setCookieConsent('accepted')">Accept all</button>
+      <button class="btn-cookie-decline" onclick="setCookieConsent('declined')">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      if (!localStorage.getItem('ib-cookie-consent')) {
+        setTimeout(function () {
+          var b = document.getElementById('cookie-banner');
+          if (b) b.classList.add('visible');
+        }, 900);
+      }
+    })();
+
+    function setCookieConsent(value) {
+      localStorage.setItem('ib-cookie-consent', value);
+      var b = document.getElementById('cookie-banner');
+      if (b) b.classList.remove('visible');
+    }
+  </script>
 
 </body>
 </html>
