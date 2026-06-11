@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Idle Busters — Indie Game Studio</title>
-  <meta name="description" content="Idle Busters is an indie game studio building tactical PC games for Steam. Founded 2025." />
+  <meta name="description" content="Idle Busters is an indie game studio building tactical PC games for Steam." />
   <link rel="icon" type="image/png" sizes="32x32" href="Logo IB 32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="Logo IB 16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -316,43 +316,6 @@
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
-    /* ── COOKIE BANNER ── */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: #111111;
-      color: #fff;
-      padding: 20px clamp(24px, 5vw, 80px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      transform: translateY(100%);
-      transition: transform 0.35s ease;
-      box-shadow: 0 -4px 24px rgba(0,0,0,0.12);
-    }
-    #cookie-banner.visible { transform: translateY(0); }
-    #cookie-banner p { font-size: 14px; color: rgba(255,255,255,0.75); max-width: 640px; line-height: 1.55; }
-    #cookie-banner a { color: #fff; text-decoration: underline; }
-    .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
-    .btn-cookie-accept {
-      background: #fff; color: #111;
-      padding: 10px 22px; border-radius: 8px;
-      font-size: 14px; font-weight: 600; font-family: inherit;
-      cursor: pointer; border: none; transition: opacity 0.15s;
-    }
-    .btn-cookie-accept:hover { opacity: 0.85; }
-    .btn-cookie-decline {
-      background: transparent; color: rgba(255,255,255,0.65);
-      padding: 10px 22px; border-radius: 8px;
-      font-size: 14px; font-weight: 500; font-family: inherit;
-      cursor: pointer; border: 1.5px solid rgba(255,255,255,0.25);
-      transition: border-color 0.15s, color 0.15s;
-    }
-    .btn-cookie-decline:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -373,16 +336,13 @@
       <img src="logo.png" alt="Idle Busters" />
     </a>
     <ul class="nav-links">
-      <li><a href="#about">Studio</a></li>
-      <li><a href="#game">Game</a></li>
-      <li><a href="#team">Team</a></li>
       <li><a href="mailto:info@idlebusters.com" class="nav-cta">Contact us</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-label">Indie Game Studio · Est. 2025</div>
+    <div class="hero-label">Indie Game Studio</div>
     <h1>We build<br/>tactical PC games.</h1>
     <p class="hero-sub">
       Idle Busters is a small studio focused on deep, replayable strategy games for PC —
@@ -390,111 +350,6 @@
     </p>
     <div class="hero-actions">
       <a href="mailto:info@idlebusters.com" class="btn btn-primary">Get in touch</a>
-      <a href="https://github.com/IdleBusters" target="_blank" rel="noopener" class="btn btn-outline">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
-      </a>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-grid">
-      <div>
-        <p class="section-label">About us</p>
-        <h2>Small team.<br/>Big ambitions.</h2>
-        <p>Founded in March 2025 by two game industry veterans, Idle Busters focuses on creating tactical and strategic games that reward skill, creativity, and replay value.</p>
-        <p>Our founders previously worked together at Hot Siberians and bring a combined 20+ years of experience spanning game design, production, and business.</p>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="stat-value">2025</div><div class="stat-label">Founded</div></div>
-        <div class="stat"><div class="stat-value">20+</div><div class="stat-label">Years combined experience</div></div>
-        <div class="stat"><div class="stat-value">PC</div><div class="stat-label">Platform · Steam</div></div>
-        <div class="stat"><div class="stat-value">1</div><div class="stat-label">Game in development</div></div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- GAME -->
-  <section id="game" style="background:var(--bg-subtle); max-width:100%; padding-left:0; padding-right:0;">
-    <div style="max-width:1100px; margin:0 auto; padding:clamp(64px,10vw,120px) clamp(24px,5vw,80px);">
-      <p class="section-label">Current project</p>
-      <div class="game-card">
-        <div>
-          <div class="game-badge">In development · ~60%</div>
-          <h3>Ordo Venator</h3>
-          <p class="pitch">"Rogue-lite dice-building about beast hunting"</p>
-          <div class="game-tags">
-            <span class="tag">Rogue-lite</span>
-            <span class="tag">Dice-building</span>
-            <span class="tag">Dark Fantasy</span>
-            <span class="tag">Steam</span>
-          </div>
-          <p style="font-size:14px;color:var(--text-muted);margin-bottom:20px;">
-            A dice-collectible rogue-lite set in a medieval dark fantasy world. 160+ skills,
-            40+ monster types, and 7 unique hunters — every run is a different puzzle.
-          </p>
-          <div>
-            <div class="progress-label">Development progress</div>
-            <div class="progress-bar"><div class="progress-fill"></div></div>
-          </div>
-        </div>
-        <div style="text-align:center;opacity:0.5;">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-            <rect width="80" height="80" rx="16" fill="#EEF2FF"/>
-            <path d="M40 16L52 30H28L40 16Z" fill="#4f46e5" opacity="0.8"/>
-            <rect x="24" y="32" width="32" height="28" rx="4" fill="#4f46e5" opacity="0.5"/>
-            <circle cx="40" cy="46" r="8" fill="#4f46e5"/>
-            <rect x="36" y="62" width="8" height="6" rx="2" fill="#4f46e5" opacity="0.6"/>
-          </svg>
-          <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Coming to Steam</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- TEAM -->
-  <section id="team">
-    <p class="section-label">Team</p>
-    <h2 style="font-size:clamp(28px,3vw,40px);font-weight:700;letter-spacing:-1px;line-height:1.15;">The founders</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">DK</div>
-        <h3>Dmitrii Koshelev</h3>
-        <p class="team-role">CEO &amp; Co-Founder</p>
-        <p>10+ years in game development and business management. Previously CEO at Hot Siberians, specialising in idle and tycoon games. Drives production, strategy, and business development at Idle Busters.</p>
-        <div class="team-links">
-          <a href="https://linkedin.com/in/dmitrii-koshelev-280baa43" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">II</div>
-        <h3>Iurii Isaev</h3>
-        <p class="team-role">Design Lead &amp; Co-Founder</p>
-        <p>10+ years in game design and development. Previously Design Lead at Hot Siberians and Lead Game Designer on <em>Secret Government</em> (Steam). Leads all game design, mechanics, and balance at Idle Busters.</p>
-        <div class="team-links">
-          <a href="https://linkedin.com/in/tordenson" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <p class="section-label">Contact</p>
-    <h2>Let's talk.</h2>
-    <p>Press, partnerships, or just curious — we're happy to hear from you.</p>
-    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-      <a href="mailto:info@idlebusters.com" class="btn btn-primary">info@idlebusters.com</a>
-      <a href="https://github.com/IdleBusters" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
     </div>
   </section>
 
@@ -502,7 +357,7 @@
   <footer>
     <div class="footer-brand">
       <img src="logo.png" alt="Idle Busters" />
-      <p>© 2026 Idle Busters Corporation All rights reserved.</p>
+      <p>© 2025 Idle Busters, Inc. All rights reserved.</p>
     </div>
     <p>
       <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
@@ -510,35 +365,6 @@
       <a href="mailto:info@idlebusters.com">info@idlebusters.com</a>
     </p>
   </footer>
-
-  <!-- COOKIE CONSENT BANNER -->
-  <div id="cookie-banner" role="region" aria-label="Cookie consent">
-    <p>
-      We use cookies to ensure basic site functionality and analyse traffic. See our
-      <a href="cookie-policy.html">Cookie Policy</a> for details.
-    </p>
-    <div class="cookie-actions">
-      <button class="btn-cookie-accept" onclick="setCookieConsent('accepted')">Accept all</button>
-      <button class="btn-cookie-decline" onclick="setCookieConsent('declined')">Decline</button>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      if (!localStorage.getItem('ib-cookie-consent')) {
-        setTimeout(function () {
-          var b = document.getElementById('cookie-banner');
-          if (b) b.classList.add('visible');
-        }, 900);
-      }
-    })();
-
-    function setCookieConsent(value) {
-      localStorage.setItem('ib-cookie-consent', value);
-      var b = document.getElementById('cookie-banner');
-      if (b) b.classList.remove('visible');
-    }
-  </script>
 
 </body>
 </html>
